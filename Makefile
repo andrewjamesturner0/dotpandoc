@@ -56,5 +56,8 @@ cleanpdf:
 cleandocx:
 	rm $(FILENAME)_v$(VERSION).docx
 
-clean: cleanhtml cleanpdf cleandocx
+cleanodt:
+	rm $(FILENAME)_v$(VERSION).odt
+
+clean: cleanhtml cleanpdf cleandocx cleanodt
 
