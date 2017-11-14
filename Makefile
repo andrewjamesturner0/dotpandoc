@@ -2,7 +2,7 @@ VERSION = 0.0.0
 FILENAME = example
 HOME = /home/ajt
 
-PANDOC_FLAGS = --smart \
+PANDOC_FLAGS = -smart \
     --standalone \
     --filter=pandoc-citeproc \
     --variable version=$(VERSION) \
@@ -15,9 +15,9 @@ PANDOC_PDF_FLAGS = --variable fontfamily=libertine \
 PANDOC_HTML_FLAGS = --include-in-header=$(HOME)/.pandoc/buttondown.css \
     --template=html-version-number.template
 
-PANDOC_ODT_FLAGS = --reference-odt=$(HOME)/.pandoc/reference.odt
+PANDOC_ODT_FLAGS = --reference-doc=$(HOME)/.pandoc/reference.odt
 
-PANDOC_DOCX_FLAGS = --reference-docx=$(HOME)/.pandoc/reference-plain.docx
+PANDOC_DOCX_FLAGS = --reference-doc=$(HOME)/.pandoc/reference-plain.docx
 
 
 
