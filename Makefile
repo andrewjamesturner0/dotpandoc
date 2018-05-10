@@ -32,6 +32,8 @@ docx: $(FILENAME)_v$(VERSION).docx
 odt: $(FILENAME)_v$(VERSION).odt
 
 
+%.md: $(FILENAME).Rmd
+	Rscript -e "library(knitr); knit('$<')"
 
 %.pdf: $(FILENAME).md $(FILENAME).bib
 	pandoc $< $(PANDOC_FLAGS) $(PANDOC_PDF_FLAGS) -o $@
