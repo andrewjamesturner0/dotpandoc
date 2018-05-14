@@ -2,7 +2,7 @@ VERSION = 0.0.0
 FILENAME = example
 HOME = /home/ajt
 
-PANDOC_FLAGS = -smart \
+PANDOC_FLAGS = -f markdown-smart \
     --standalone \
     --filter=pandoc-citeproc \
     --variable version=$(VERSION) \
